@@ -1,0 +1,86 @@
+[
+    {
+        "reader_name": "赤モンキー・D・ルフィ",
+        "reader_image_url": "./static/img/reader/ST01-001.png"
+    },
+    {
+        "reader_name": "緑ユースタス・キッド",
+        "reader_image_url": "./static/img/reader/ST02-001.png"
+    },
+    {
+        "reader_name": "青クロコダイル",
+        "reader_image_url": "./static/img/reader/ST03-001.png"
+    },
+    {
+        "reader_name": "紫カイドウ",
+        "reader_image_url": "./static/img/reader/ST04-001.png"
+    },
+    {
+        "reader_name": "紫シャンクス",
+        "reader_image_url": "./static/img/reader/ST05-001.png"
+    },
+    {
+        "reader_name": "黒サカズキ",
+        "reader_image_url": "./static/img/reader/ST06-001.png"
+    },
+    {
+        "reader_name": "赤ロロノア・ゾロ",
+        "reader_image_url": "./static/img/reader/OP01-001.png"
+    },
+    {
+        "reader_name": "赤緑トラファルガー・ロー",
+        "reader_image_url": "./static/img/reader/OP01-002.png"
+    },
+    {
+        "reader_name": "赤緑モンキー・D・ルフィ",
+        "reader_image_url": "./static/img/reader/OP01-003.png"
+    },
+    {
+        "reader_name": "緑光月おでん",
+        "reader_image_url": "./static/img/reader/OP01-031.png"
+    },
+    {
+        "reader_name": "青ドンキホーテ・ドフラミンゴ",
+        "reader_image_url": "./static/img/reader/OP01-060.png"
+    },
+    {
+        "reader_name": "青紫カイドウ",
+        "reader_image_url": "./static/img/reader/OP01-061.png"
+    },
+    {
+        "reader_name": "紫キング",
+        "reader_image_url": "./static/img/reader/OP01-091.png"
+    },
+    {
+        "reader_name": "赤エドワード・ニューゲート",
+        "reader_image_url": "./static/img/reader/OP02-001.png"
+    },
+    {
+        "reader_name": "赤黒モンキー・D・ガープ",
+        "reader_image_url": "./static/img/reader/OP02-002.png"
+    },
+    {
+        "reader_name": "緑錦えもん",
+        "reader_image_url": "./static/img/reader/OP02-025.png"
+    },
+    {
+        "reader_name": "青緑サンジ",
+        "reader_image_url": "./static/img/reader/OP02-026.png"
+    },
+    {
+        "reader_name": "青エンポリオ・イワンコフ",
+        "reader_image_url": "./static/img/reader/OP02-049.png"
+    },
+    {
+        "reader_name": "紫マゼラン",
+        "reader_image_url": "./static/img/reader/OP02-071.png"
+    },
+    {
+        "reader_name": "紫黒ゼット",
+        "reader_image_url": "./static/img/reader/OP02-072.png"
+    },
+    {
+        "reader_name": "黒スモーカー",
+        "reader_image_url": "./static/img/reader/OP02-093.png"
+    }
+]

@@ -1,0 +1,9 @@
+.rulesSearch:before {
+    background-image: url("../img/ico_cardlist.png");
+}
+.rulesRecord{
+    margin-top:50px;
+}
+.rulesRecord:before {
+    background-image: url("../img/ico_products.png");
+}

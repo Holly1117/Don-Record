@@ -1,0 +1,61 @@
+@media (max-width: 1000px) {
+
+    h3 {
+        margin: 2%;
+    }
+
+    dl {
+        margin: 2%;
+    }
+
+    .funButton, .addRadioButton {
+        width: calc(100%/1) !important;
+        height: 40px;
+        margin-bottom: 1%;
+    }
+
+    .addButton{
+        height: 60px;
+    }
+    .savedButton{
+
+        height: 70px!important;
+
+    }
+
+    .categoryTitle {
+        margin-top: 10%;
+        font-size: 4rem
+    }
+
+    .rulesInner {
+        padding: 10px;
+    }
+
+    .ruleInfoList li {
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+
+    .rulesInfoTit {
+        font-size: 1rem;
+    }
+
+    .rulesInfoDate {
+        margin: 0%;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    .rulesInfoDate:before {
+        width: 15px;
+        height: 15px;
+    }
+
+    .battleDate {
+        font-size: 20px;
+    }
+
+
+
+}

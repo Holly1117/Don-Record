@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Don!!Record -対戦を記録する-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/add.css">
+    <link rel="stylesheet" href="./static/css/sp.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="./static/js/add.js"></script>
+    <script src="./static/js/partsButton.js"></script>
+</head>
+
+<body>
+
+    <main class="contentsWrap">
+
+        <div class="centering">
+            <h2 class="categoryTitle"><a href="/index.html">Don!!Record</a><p>ver 1.10</p>
+            </h2>
+        </div>
+
+        <div class="rulesInner">
+            <div class="boxTxt">
+                <h3 class="rulesColTit rulesFunction">ページ</h3>
+            </div>
+            <button class="funButton" onclick="topPage()">トップに戻る</button>
+            <button class="funButton" onclick="battleRecordPage()">過去の戦績を見る</button>
+            <button class="funButton">coming soon</button>
+        </div>
+
+        <div class="rulesInner">
+
+            <div class="boxTxt">
+                <h3 class="rulesColTit rulesAdd">記録</h3>
+            </div>
+
+            <div class="addArea">
+                <p class="addTil">試合日程</p>
+                <button class="addButton">日付を選択する</button>
+            </div>
+            <div class="addArea">
+                <p class="addTil">順番</p>
+                <div class="radioBox">
+                    <button class="addButton addRadioButton">先攻</button>
+                    <button class="addButton addRadioButton">後攻</button>
+                </div>
+            </div>
+            <div class="addArea">
+                <p class="addTil">結果</p>
+                <div class="radioBox">
+                    <button class="addButton addRadioButton">Win</button>
+                    <button class="addButton addRadioButton">Lose</button>
+                </div>
+            </div>
+            <div class="addArea">
+                <p class="addTil">自分</p>
+                <select name="series" class="selectModal" id="series">
+                    <option value="">しゅうや</option>
+                    <option value="">まさとら</option>
+                </select>
+            </div>
+            <div class="addArea">
+                <p class="addTil">使用デッキ</p>
+                <select name="series" class="selectModal" id="series">
+                    <option value="">収録</option>
+                </select>
+            </div>
+            <div class="addArea">
+                <p class="addTil">相手</p>
+                <select name="series" class="selectModal" id="series">
+                    <option value="">しゅうや</option>
+                    <option value="">まさとら</option>
+                </select>
+            </div>
+            <div class="addArea">
+                <p class="addTil">対戦デッキ</p>
+                <select name="series" class="selectModal" id="series">
+                    <option value="">収録</option>
+                </select>
+            </div>
+            <div class="addArea">
+                <button class="addButton savedButton">保存</button>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Don!!Record -過去の戦績を見る-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/record.css">
+    <link rel="stylesheet" href="./static/css/sp.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="./static/js/record.js"></script>
+    <script src="./static/js/partsButton.js"></script>
+</head>
+
+<body>
+
+    <main class="contentsWrap">
+
+        <div class="centering">
+            <h2 class="categoryTitle"><a href="/index.html">Don!!Record</a><p>ver 1.10</p>
+            </h2>
+        </div>
+
+        <div class="rulesInner">
+            <div class="boxTxt">
+                <h3 class="rulesColTit rulesFunction">ページ</h3>
+            </div>
+            <button class="funButton" onclick="topPage()">トップに戻る</button>
+            <button class="funButton" onclick="battleAddedPage()">対戦を記録する</button>
+            <button class="funButton">coming soon</button>
+        </div>
+
+        <div class="rulesInner">
+            <div class="boxTxt">
+                <h3 class="rulesColTit rulesSearch">検索</h3>
+            </div>
+            <button class="funButton" onclick="descendingOrder()">新しい順</button>
+            <button class="funButton" onclick="ascendingOrder()">古い順</button>
+            <div class="boxTxt">
+                <h3 class="rulesColTit rulesRecord">戦績一覧</h3>
+            </div>
+            <ul class="battlesBox" id="battlesBox">
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

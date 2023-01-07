@@ -1,0 +1,245 @@
+* {
+    font-family: "Oswald", YuGothic, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: static;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg.jpg");
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0%;
+}
+
+ul {
+    list-style: none;
+}
+
+.contentsWrap {
+    margin: 0 auto;
+}
+
+.rulesInner {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgba(146, 129, 87, 0.07);
+    padding: 28px 30px;
+    border-radius: 2px;
+}
+
+.rulesTitCol .rulesColTit {
+    font-size: 22px;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.centering {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categoryTitle a {
+    cursor: default;
+    color: inherit;
+    text-decoration: none;
+}
+
+.categoryTitle {
+    display: block;
+    width: 100%;
+    background: url("../img/ico_anchor.png") bottom center no-repeat;
+    background-size: auto;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.categoryTitle p {
+    font-size: 1rem;
+}
+
+.listCatNav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0%;
+}
+
+.funButton {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    width: calc(40%/2);
+    height: 50px;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s 0s;
+    box-sizing: border-box;
+    background-color: #928157;
+    margin-top: 1%;
+}
+
+.funButton:hover {
+    background-color: #c8c0ab;
+    transition: background-color 0.3s 0s;
+}
+
+.rulesColTit {
+    display: flex;
+}
+
+.rulesColTit:before {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5%;
+}
+
+.rulesFunction:before {
+    background-image: url("../img/ico_cat_rule.svg");
+}
+
+
+.rulesNews:before {
+    background-image: url("../img/ico_news.png");
+}
+
+.rulesBattle:before {
+    background-image: url("../img/ico_cat_battle.svg");
+}
+
+.ruleInfoList {
+    margin-bottom: 10px;
+    padding-left: 0%;
+}
+
+.ruleInfoList li {
+    padding: 10px 20px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 10px;
+    color: #0b0b0b;
+    text-decoration: none;
+}
+
+.ruleInfoList li:hover {
+    background-color: #c8c0ab;
+    transition: background-color 0.3s 0s;
+}
+
+.rulesInfoDate {
+    margin-inline-start: 0px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.rulesInfoDate::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5%;
+    background: url("../img/ico_rudder.png") no-repeat center center;
+    background-size: contain;
+}
+
+.battlesBox {
+    padding: 0%;
+}
+
+.battleDate {
+    font-size: 20px;
+}
+
+.battlesDetail {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: #000;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.eventThumnail {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    max-width: 90px;
+    padding: 1%;
+    background-color: #dcd6c6;
+}
+
+.eventThumnail img {
+    width: 100%;
+}
+
+.battleRight {
+    background: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0%;
+}
+
+.battleRight:hover {
+    background-color: #c8c0ab;
+    transition: background-color 0.3s 0s;
+}
+
+.battleTit {
+    width: 100px;
+}
+
+.winTit {
+    background: linear-gradient(transparent 60%, #e74c3c 30%);
+}
+
+.loseTit {
+    background: linear-gradient(transparent 60%, #3498db 30%);
+}
+
+.battleTit span, .battleTxt span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.battleTxt {
+    margin: 0%;
+}
+
+@media (min-width: 1000px) {
+    .contentsWrap {
+        width: 1050px;
+        padding: 50px 75px;
+    }
+}
