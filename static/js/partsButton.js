@@ -1,11 +1,11 @@
 function battleAddedPage(){
-    location.href = "/add.html";
+    location.href = "/Don-Record/add";
 }
 
 function battleRecordPage(){
-    location.href = "/record.html";
+    location.href = "/Don-Record/record";
 }
 
 function topPage(){
-    location.href = "/index.html";
+    location.href = "/Don-Record/index";
 }

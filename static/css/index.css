@@ -149,11 +149,6 @@ ul {
     text-decoration: none;
 }
 
-.ruleInfoList li:hover {
-    background-color: #c8c0ab;
-    transition: background-color 0.3s 0s;
-}
-
 .rulesInfoDate {
     margin-inline-start: 0px;
     margin-top: 8px;
@@ -209,11 +204,6 @@ ul {
     width: 100%;
     padding: 10px 20px;
     margin: 0%;
-}
-
-.battleRight:hover {
-    background-color: #c8c0ab;
-    transition: background-color 0.3s 0s;
 }
 
 .battleTit {
