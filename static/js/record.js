@@ -1,22 +1,15 @@
 
 function getRecordData(descendingOrderFlag) {
-    //GASのAPIのURL（各自変更してください。）
-    const endpoint = "https://script.google.com/macros/s/AKfycbzxx29-QjUk_naUSAwq6oUosGvNZNViKnpxv3RmGRKhfzlcXXOSIH3jfa4AUA8bZyur/exec";
+    
+    const request = new XMLHttpRequest();
 
-    // XMLHttpRequestオブジェクトの作成
-    var request = new XMLHttpRequest();
+    request.open('GET', API_KEY, true);
 
-    // URLを開く
-    request.open('GET', endpoint, true);
-
-    // レスポンスが返ってきた時の処理を記述 
     request.onload = function () {
-        // レスポンスが返ってきた時の処理
-        var responseData = this.response;
+        const responseData = this.response;
         setBattleRecord(responseData, descendingOrderFlag)
     }
 
-    // リクエストをURLに送信
     request.send();
 }
 
@@ -92,8 +85,8 @@ function setBattleRecord(responseData, descendingOrderFlag) {
         const myBattleDetailTag = setBattleDetailTag(value.my_reader, value.my_reader_image, value.my_name, value.my_winner, value.my_first);
         const youBattleDetailTag = setBattleDetailTag(value.you_reader, value.you_reader_image, value.you_name, !value.my_winner, !value.my_first);
 
-        let battleOrderTag = value.my_winner ? myBattleDetailTag + youBattleDetailTag : youBattleDetailTag + myBattleDetailTag;
-        return `<dev class="battlesInfo">${battleDateTag}${battleOrderTag}</div>`
+        const battleOrderTag = value.my_winner ? myBattleDetailTag + youBattleDetailTag : youBattleDetailTag + myBattleDetailTag;
+        return `<dev class="battlesInfo" >${battleDateTag}${battleOrderTag}</dev>`
     })
 
     $("#battlesBox")[0].innerHTML = recordsTag.join("");
@@ -115,7 +108,7 @@ function setBattleDetailTag(readerName, reader_image, playerName, result, first)
     const firstLabelTag = `<h2 class="battleTit ${resultClass(result)}">${resultLabels(result)}<span>-${firstLabels(first)}-</span></h2>`;
     const playerNameTag = `<dt class="battleTxt">名前:<span>${playerName}</span></dt>`;
     const readerTag = `<dt class="battleTxt">リーダー:<span>${readerName}</span></dt>`;
-    const battleDetailTag = `<li class="battlesDetail"><div class="eventThumnail">${imageTag}</div><dl class="battleRight">${firstLabelTag}${playerNameTag}${readerTag}</dl></li>`;
+    const battleDetailTag = `<li class="battlesDetail"><dev class="eventThumnail">${imageTag}</dev><dl class="battleRight">${firstLabelTag}${playerNameTag}${readerTag}</dl></li>`;
     return battleDetailTag;
 }
 
@@ -123,14 +116,19 @@ function clearRecords() {
     $("#battlesBox")[0].innerHTML = '';
 }
 
-function descendingOrder(){
-    clearRecords();
-    getRecordData(true);
-}
-
-function ascendingOrder(){
-    clearRecords();
-    getRecordData(false);
+function recordSort() {
+    const sordBtnContent = document.getElementById('sordButton').textContent;
+    const sordBtnSwitching = content => { return content == '新しい順' ? `古い順` : '新しい順'; }
+    document.getElementById('sordButton').textContent = sordBtnSwitching(sordBtnContent);
+    const battlesBox = document.getElementById("battlesBox");
+    const battleRecord = battlesBox.getElementsByClassName("battlesInfo");
+    const battleArray = Array.prototype.slice.call(battleRecord);
+    const sordedbattleArray = battleArray.reverse();
+    for (const i in sordedbattleArray) {
+        battlesBox.removeChild(sordedbattleArray[i])
+        battlesBox.appendChild(sordedbattleArray[i])
+    }
 }
 
 getRecordData(true);
+

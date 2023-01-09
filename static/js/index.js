@@ -1,95 +1,15 @@
 function getRecordData() {
-    //GASのAPIのURL（各自変更してください。）
-    const endpoint = "https://script.google.com/macros/s/AKfycbzxx29-QjUk_naUSAwq6oUosGvNZNViKnpxv3RmGRKhfzlcXXOSIH3jfa4AUA8bZyur/exec";
 
-    // XMLHttpRequestオブジェクトの作成
-    var request = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
 
-    // URLを開く
-    request.open('GET', endpoint, true);
+    request.open('GET', API_KEY, true);
 
-    // レスポンスが返ってきた時の処理を記述 
     request.onload = function () {
-        // レスポンスが返ってきた時の処理
-        var responseData = this.response;
+        const responseData = this.response;
         setNowBattleRecord(responseData)
     }
 
-    // リクエストをURLに送信
     request.send();
-}
-
-function getNewsData() {
-    //GASのAPIのURL（各自変更してください。）
-    const endpoint = "https://script.google.com/macros/s/AKfycbzOBOX9t7hN6dOT8g_RVPLnKp-ndaAbQ-tnvr-qveINdcyapUDHqZCkDfiYx_VSRM_x/exec";
-
-    // XMLHttpRequestオブジェクトの作成
-    var request = new XMLHttpRequest();
-
-    // URLを開く
-    request.open('GET', endpoint, true);
-
-    // レスポンスが返ってきた時の処理を記述 
-    request.onload = function () {
-        // レスポンスが返ってきた時の処理
-        var responseData = this.response;
-        setNewsBox(responseData)
-    }
-
-    // リクエストをURLに送信
-    request.send();
-}
-
-function setNewsBox(responseData) {
-
-    console.log(responseData)
-
-    const json = responseData;
-
-    const recordsList = JSON.parse(json);
-
-    const newsData = []
-
-    const formatDate = (date) => {
-
-        const beforeDate = new Date(date)
-
-        return new Intl.DateTimeFormat("ja-jp", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-        }).format(beforeDate);
-    }
-
-    for (const i in recordsList) {
-        const recordData = recordsList[i];
-        const newsList = {
-            date: formatDate(recordData.date),
-            context: recordData.context
-        }
-        newsData.push(newsList);
-    }
-
-    const sortedNewsData = newsData.sort(function (a, b) {
-        if (a.battle_date > b.battle_date) {
-            return -1;
-        } else {
-            return 1;
-        }
-    });
-
-    const newsTag = sortedNewsData.map((value) => {
-
-        const contextTag = `<dt class="rulesInfoTit">${value.context}</dt>`;
-        const dateTag = `<dd class="rulesInfoDate"><span>${value.date}</span></dd>`;
-        const liTag = `<li><dl>${contextTag}${dateTag}</dl></li>`;
-        return liTag;
-    })
-
-    $("#nowBattlesBox")[0].innerHTML = newsTag.join("");
 }
 
 function setNowBattleRecord(responseData) {
@@ -192,4 +112,3 @@ function setBattleDetailTag(readerName, reader_image, playerName, result, first)
 }
 
 getRecordData();
-//getNewsData();

@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="./static/css/sp.css">
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="./static/js/import.js"></script>
     <script src="./static/js/add.js"></script>
     <script src="./static/js/partsButton.js"></script>
 </head>
@@ -22,7 +24,8 @@
     <main class="contentsWrap">
 
         <div class="centering">
-            <h2 class="categoryTitle"><a href="/Don-Record/index">Don!!Record</a><p>ver 1.10</p>
+            <h2 class="categoryTitle"><a href="/Don-Record/index">Don!!Record</a>
+                <p>ver 1.10</p>
             </h2>
         </div>
 
@@ -35,35 +38,17 @@
             <button class="funButton">coming soon</button>
         </div>
 
-        <div class="rulesInner">
+        <form name="recordDataForm" class="rulesInner" id="form">
 
             <div class="boxTxt">
                 <h3 class="rulesColTit rulesAdd">記録</h3>
             </div>
-
-            <div class="addArea">
-                <p class="addTil">試合日程</p>
-                <button class="addButton">日付を選択する</button>
-            </div>
-            <div class="addArea">
-                <p class="addTil">順番</p>
-                <div class="radioBox">
-                    <button class="addButton addRadioButton">先攻</button>
-                    <button class="addButton addRadioButton">後攻</button>
-                </div>
-            </div>
-            <div class="addArea">
-                <p class="addTil">結果</p>
-                <div class="radioBox">
-                    <button class="addButton addRadioButton">Win</button>
-                    <button class="addButton addRadioButton">Lose</button>
-                </div>
-            </div>
             <div class="addArea">
                 <p class="addTil">自分</p>
-                <select name="series" class="selectModal" id="series">
-                    <option value="">しゅうや</option>
-                    <option value="">まさとら</option>
+                <select name="myName" class="selectModal">
+                    <option value="しゅうや">しゅうや</option>
+                    <option value="まさとら">まさとら</option>
+                    <option value="そういちろう">そういちろう</option>
                 </select>
             </div>
             <div class="addArea" id="myRreadersBox">
@@ -71,20 +56,40 @@
             </div>
             <div class="addArea">
                 <p class="addTil">相手</p>
-                <select name="series" class="selectModal" id="series">
-                    <option value="">しゅうや</option>
-                    <option value="">まさとら</option>
+                <select name="youName" class="selectModal">
+                    <option value="しゅうや">しゅうや</option>
+                    <option value="まさとら">まさとら</option>
+                    <option value="そういちろう">そういちろう</option>
                 </select>
             </div>
             <div class="addArea" id="youReadersBox">
                 <p class="addTil">対戦デッキ</p>
             </div>
             <div class="addArea">
-                <button class="addButton savedButton">保存</button>
+                <p class="addTil">順番</p>
+                <div class="radioBox">
+                    <input type="radio" id="first" name="myFirst" value="true" checked>
+                    <label for="first">先攻</label>
+                    <input type="radio" id="second" name="myFirst" value="false">
+                    <label for="second">後攻</label>
+                </div>
+            </div>
+            <div class="addArea">
+                <p class="addTil">結果</p>
+                <div class="radioBox">
+                    <input type="radio" id="win" name="myResult" value="true" checked>
+                    <label for="win">WIN</label>
+                    <input type="radio" id="lose" name="myResult" value="false">
+                    <label for="lose">LOSE</label>
+                </div>
+            </div>
+            <div class="addArea">
+                <input class="addButton savedButton" onclick="savedRecordData()" value="保存">
             </div>
 
-        </div>
+            </div>
     </main>
+    <footer></footer>
 </body>
 
 </html>
