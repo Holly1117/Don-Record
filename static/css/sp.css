@@ -8,17 +8,17 @@
         margin: 2%;
     }
 
-    .funButton, .addRadioButton {
+    .funButton,.addButton, .addRadioButton {
         width: calc(100%/1) !important;
-        height: 40px;
+        height: 55px;
         margin-bottom: 1%;
     }
 
-    .addButton{
-        height: 50px;
+    .addButton:hover,.savedButton:hover,.funButton:hover{
+        background-color: #928157;
     }
-    .savedButton{
 
+    .savedButton{
         height: 70px!important;
 
     }
