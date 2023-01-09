@@ -72,10 +72,12 @@ function postRecordData(recordData) {
         .then(function (data) {
             console.log(JSON.stringify(data));
             alert("戦績の保存が成功しました。");
+            document.location.reload()
         })
         .catch(function (err) {
             console.log("err=" + err);
             alert("戦績の保存が失敗しました。担当者にお問い合わせてください。");
+            document.location.reload()
         });
 
 }
