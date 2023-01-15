@@ -34,7 +34,6 @@ ul {
     margin-bottom: 25px;
     background-color: rgba(146, 129, 87, 0.07);
     padding: 28px 30px;
-    border-radius: 2px;
 }
 
 .rulesTitCol .rulesColTit {
@@ -95,7 +94,6 @@ ul {
     -webkit-justify-content: space-between;
     justify-content: space-between;
     border: none;
-    border-radius: 5px;
     transition: background-color 0.3s 0s;
     box-sizing: border-box;
     background-color: #928157;
@@ -126,13 +124,16 @@ ul {
     background-image: url("../img/ico_cat_rule.svg");
 }
 
-
 .rulesNews:before {
     background-image: url("../img/ico_news.png");
 }
 
 .rulesBattle:before {
     background-image: url("../img/ico_cat_battle.svg");
+}
+
+.rulesSetting:before {
+    background-image: url("../img/ico_rules.png");
 }
 
 .ruleInfoList {
@@ -226,6 +227,8 @@ ul {
 .battleTxt {
     margin: 0%;
 }
+
+
 
 @media (min-width: 1000px) {
     .contentsWrap {

@@ -3,19 +3,14 @@ window.onload = function () {
 }
 
 function setReaderSelectBox() {
-    const jsonUrl = "./static/json/reader.json"
 
-    let readerList;
+    let readersList = [] ;
 
-    $.ajaxSetup({ async: false });
-    $.getJSON(jsonUrl, function (jsonData) {
-        readerList = jsonData;
-    });
-    $.ajaxSetup({ async: true });
-
-    const readersList = readerList.map(v => {
-        return v.reader_name;
-    })
+    if(!localStorage.getItem('readerList')) {
+        readersList = getReaderList()
+    }else{
+        readersList = localStorage.getItem('readerList').split(',');
+    }
 
     const optionTag = readersList.map(v => {
         return `<option value="${v}">${v}</option>`
