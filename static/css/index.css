@@ -215,9 +215,18 @@ ul {
     background: linear-gradient(transparent 60%, #e74c3c 30%);
 }
 
+.winBack {
+    background-color: #e74c3c;
+}
+
 .loseTit {
     background: linear-gradient(transparent 60%, #3498db 30%);
 }
+
+.loseBack {
+    background-color: #3498db;
+}
+
 
 .battleTit span, .battleTxt span {
     margin-left: 10px;
@@ -227,8 +236,6 @@ ul {
 .battleTxt {
     margin: 0%;
 }
-
-
 
 @media (min-width: 1000px) {
     .contentsWrap {

@@ -7,3 +7,34 @@
 .rulesRecord:before {
     background-image: url("../img/ico_products.png");
 }
+
+.rulesInfoYearsDate {
+    margin-inline-start: 0px;
+    margin: 30px 0px 10px 0px;
+    font-size: 2rem;
+    color: #000;
+}
+
+.rulesInfoYearsDate::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5%;
+    background: url("../img/ico_rudder.png") no-repeat center center;
+    background-size: contain;
+}
+
+.YearsDateTit {
+    background: linear-gradient(transparent 60%, #928157 30%);
+}
+
+.rulesInfoHoursDate {
+    margin-inline-start: 0px;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin:0%;
+}

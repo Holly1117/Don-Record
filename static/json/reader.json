@@ -24,6 +24,10 @@
         "reader_image_url": "./static/img/reader/ST06-001.png"
     },
     {
+        "reader_name": "黄シャーロット・リンリン",
+        "reader_image_url": "./static/img/reader/ST07-001.png"
+    },
+    {
         "reader_name": "赤ロロノア・ゾロ",
         "reader_image_url": "./static/img/reader/OP01-001.png"
     },
