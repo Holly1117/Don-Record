@@ -16,7 +16,7 @@
 }
 
 .rulesInfoYearsDate::before {
-    content: '';
+    content: "";
     display: inline-block;
     position: relative;
     vertical-align: middle;

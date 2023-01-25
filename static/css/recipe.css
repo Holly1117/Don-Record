@@ -1,0 +1,48 @@
+.deckRecipe{
+    width: 100%;
+    margin-top:2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.readerCard{
+    margin:1%;
+    max-width: 150px;
+}
+
+.readerCard:hover{
+    transform: translate(0px,-10px);
+}
+
+ul.listCol {
+    padding-left: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li{
+    margin-left: 0%;;
+}
+
+.recipeCard{
+    max-width: 100%;
+}
+
+.recipeLink{
+    text-decoration: none;
+}
+
+.recipeTitle{
+    border-radius: 6px;
+    padding:10px;
+    background-color: #fff;
+    color: #a0a0a0;
+}
+
+.recipeImage{
+    width: 100%;
+    max-width: 300px;
+    height:200px;
+}

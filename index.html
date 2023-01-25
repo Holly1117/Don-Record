@@ -14,32 +14,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script src="./static/js/import.js"></script>
     <script src="./static/js/index.js"></script>
-    <script src="./static/js/partsButton.js"></script>
 </head>
 
 <body>
 
     <main class="contentsWrap">
 
-        <div class="centering">
-            <h2 class="categoryTitle"><a href="/Don-Record/index">Don!!Record</a><p>ver 1.81</p>
-            </h2>
-        </div>
-
-        <div class="rulesInner">
-            <div class="boxTxt">
-                <h3 class="rulesColTit rulesFunction">ページ</h3>
-            </div>
-            <button class="funButton" onclick="battleAddedPage()">対戦を記録する</button>
-            <button class="funButton" onclick="battleRecordPage()">過去の戦績を見る</button>
-            <button class="funButton">戦績データの分析</button>
-        </div>
+        <div class="header" id="header"></div>
 
         <div class="rulesInner">
             <div class="boxTxt">
                 <h3 class="rulesColTit rulesNews">お知らせ</h3>
             </div>
-            <ul class="ruleInfoList" id ="nowBattlesBox">
+            <ul class="ruleInfoList" id="nowBattlesBox">
                 <li>
                     <dl>
                         <dt class="rulesInfoTit">ver 1.81 アップデートしました。</dt>

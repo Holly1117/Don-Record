@@ -3,7 +3,7 @@ function getRecordData(descendingOrderFlag) {
 
     const request = new XMLHttpRequest();
 
-    request.open('GET', API_KEY, true);
+    request.open("GET", API_KEY + BATTLE_PARAMETER, true);
 
     request.onload = function () {
         const responseData = this.response;
@@ -91,7 +91,7 @@ function setBattleRecord(responseData, descendingOrderFlag) {
         if (mapObject.has(dateYears)) {
             const recordObject = mapObject.get(dateYears)
             mapObject.set(dateYears, recordObject + battlesInfoTag);
-        }else{
+        } else {
             mapObject.set(dateYears, battlesInfoTag);
         }
     });
@@ -137,16 +137,16 @@ function setTimeTitTag(nowSetTime, dataTime) {
 
 function setBattleDetailTag(readerName, reader_image, playerName, result, first) {
     const resultLabels = (boolean) => {
-        return boolean ? 'WIN' : 'LOSE';
+        return boolean ? "WIN" : "LOSE";
     }
     const resultClass = (boolean) => {
-        return boolean ? 'winTit' : 'loseTit';
+        return boolean ? "winTit" : "loseTit";
     }
     const thumnailClass = (boolean) => {
-        return boolean ? 'winBack' : 'loseBack';
+        return boolean ? "winBack" : "loseBack";
     }
     const firstLabels = (boolean) => {
-        return boolean ? '先攻' : '後攻';
+        return boolean ? "先攻" : "後攻";
     }
 
     const imageTag = `<img src=\"${reader_image}\" title="${readerName}">`;
@@ -158,9 +158,9 @@ function setBattleDetailTag(readerName, reader_image, playerName, result, first)
 }
 
 function recordSort() {
-    const sordBtnContent = document.getElementById('sordButton').textContent;
-    const sordBtnSwitching = content => { return content == '新しい順' ? `古い順` : '新しい順'; }
-    document.getElementById('sordButton').textContent = sordBtnSwitching(sordBtnContent);
+    const sordBtnContent = document.getElementById("sordButton").textContent;
+    const sordBtnSwitching = content => { return content == "新しい順" ? `古い順` : "新しい順"; }
+    document.getElementById("sordButton").textContent = sordBtnSwitching(sordBtnContent);
     const battleRecord = document.getElementsByClassName("recordsInfo");
     const battleArray = Array.prototype.slice.call(battleRecord);
     const sordedbattleArray = battleArray.reverse();

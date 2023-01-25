@@ -1,24 +1,67 @@
-const API_KEY = "https://script.google.com/macros/s/AKfycbyPQ4aSVKqhNDc3wooIT-XaLyNGRSeZomX1W6i3wYDF5Kr7cR4zl7u6o35WABWIInF_/exec";
+const API_KEY = "https://script.google.com/macros/s/AKfycbzsTCSngJ30xqRKLRe4OfhHO-vm34EwHnXD-pjRbyBZeuVqZrpsa9tXAP76dAcs3v9A/exec";
+
+const BATTLE_PARAMETER = "?sheetName=battleRecord";
+
+const VER_NAME = "ver 1.81"
 
 const getReaderList = () => {
     const jsonUrl = "./static/json/reader.json"
 
-    if (!localStorage.getItem('readerList')) {
-
+    if (!localStorage.getItem("readerImageList") || !localStorage.getItem("readerNameList") || localStorage.getItem("verName") != VER_NAME) {
         $.ajaxSetup({ async: false });
         $.getJSON(jsonUrl, function (jsonData) {
             readerList = jsonData;
         });
         $.ajaxSetup({ async: true });
 
-        const readersList = readerList.map(v => {
+        const readerNameList = readerList.map(v => {
             return v.reader_name;
         })
 
-        localStorage.setItem('readerList', JSON.stringify(readersList));
-        return readersList;
+        const readerImageList = readerList.map(v => {
+            return v.reader_image_url;
+        })
 
-    } else {
-        return localStorage.getItem('readerList').split(',');
+        localStorage.removeItem("verName");
+        localStorage.setItem("verName", VER_NAME);
+        localStorage.removeItem("readerNameList");
+        localStorage.setItem("readerNameList", readerNameList);
+        localStorage.removeItem("readerImageList");
+        localStorage.setItem("readerImageList", readerImageList);
     }
 };
+
+function battleAddedPage() {
+    location.href = "/Don-Record/add";
+}
+
+function battleRecordPage() {
+    location.href = "/Don-Record/record";
+}
+
+function recipePage() {
+    location.href = "/Don-Record/recipe";
+}
+
+const setHeaderParts = () => {
+
+    const titleTag = `<div class="centering"><h2 class="categoryTitle"><a href="/Don-Record/index">Don!!Record</a><p>${VER_NAME}</p></h2></div>`;
+
+    const battleButtonTag = `<input type="submit" class="funButton" onclick="battleAddedPage()" value="対戦の記録">`;
+
+    const recordButtonTag = `<input type="submit" class="funButton" onclick="battleRecordPage()" value="過去の戦績表">`;
+
+    const dataTag = `<input type="submit" class="funButton" onclick="recipePage()" value="デッキの登録">`;
+
+    const pageTitle = `<div class="rulesInner"><div class="boxTxt"><h3 class="rulesColTit rulesFunction">ページ</h3></div>${battleButtonTag}${recordButtonTag}${dataTag}</div>`;
+
+    const headerTag = titleTag + pageTitle;
+
+    $("#header")[0].innerHTML = headerTag;
+
+};
+
+window.addEventListener('load', () => {
+    getReaderList();
+    setHeaderParts();
+});

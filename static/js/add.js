@@ -1,26 +1,20 @@
-window.onload = function () {
+window.addEventListener('load', () => {
     setReaderSelectBox();
-}
+});
 
 function setReaderSelectBox() {
 
-    let readersList = [] ;
+    let readerList = localStorage.getItem("readerNameList").split(",");
 
-    if(!localStorage.getItem('readerList')) {
-        readersList = getReaderList()
-    }else{
-        readersList = localStorage.getItem('readerList').split(',');
-    }
-
-    const optionTag = readersList.map(v => {
+    const optionTag = readerList.map(v => {
         return `<option value="${v}">${v}</option>`
     })
 
     const youSelectBoxTag = `<select name="youDeck" class="selectModal" >${optionTag.join("")}</select>`
     const mySelectBoxTag = `<select name="myDeck" class="selectModal" >${optionTag.join("")}</select>`
 
-    $("#youReadersBox")[0].innerHTML = '<p class="addTil">対戦デッキ</p>' + youSelectBoxTag;
-    $("#myRreadersBox")[0].innerHTML = '<p class="addTil">使用デッキ</p>' + mySelectBoxTag;
+    $("#youReadersBox")[0].innerHTML = `<p class="addTil">対戦デッキ</p>` + youSelectBoxTag;
+    $("#myRreadersBox")[0].innerHTML = `<p class="addTil">使用デッキ</p>` + mySelectBoxTag;
 
 }
 
@@ -44,11 +38,11 @@ function savedRecordData() {
 
     // date
     const today = moment();
-    const todayFormat = today.format('YYYY/MM/DD HH:mm:ss')
+    const todayFormat = today.format("YYYY/MM/DD HH:mm:ss")
 
     const setRecordDate = [todayFormat, myNameValue, myDeckValue, youNameValue, youDeckValue, myResultValue, myFirstValue];
 
-    if(myNameValue == youNameValue){
+    if (myNameValue == youNameValue) {
         return alert("自分と相手の名前が同一です。異なる自分か相手の名前を選択してください。")
     }
     postRecordData(setRecordDate);
@@ -56,7 +50,7 @@ function savedRecordData() {
 
 function postRecordData(recordData) {
 
-    fetch(API_KEY, { 
+    fetch(API_KEY + BATTLE_PARAMETER, {
         method: "POST",
         body: recordData
     })
