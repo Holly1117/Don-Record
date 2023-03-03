@@ -1,6 +1,8 @@
-const API_KEY = "https://script.google.com/macros/s/AKfycbzsTCSngJ30xqRKLRe4OfhHO-vm34EwHnXD-pjRbyBZeuVqZrpsa9tXAP76dAcs3v9A/exec";
+const API_KEY = "https://script.google.com/macros/s/AKfycbzptfxiwX-hRcTCDry2ESuINEzRmZH-Qn3lFd_8dsLJHPaZZytgbckAPPcR6Ffb3J7M/exec";
 
 const BATTLE_PARAMETER = "?sheetName=battleRecord";
+
+const RECIPE_PARAMETER = "?sheetName=recipeRecord";
 
 const VER_NAME = "ver 1.81"
 
