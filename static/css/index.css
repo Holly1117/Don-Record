@@ -238,6 +238,10 @@ ul {
     margin: 0%;
 }
 
+.unavailable{
+    background-color: #a0a0a0;
+}
+
 @media (min-width: 1000px) {
     .contentsWrap {
         width: 1050px;

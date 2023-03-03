@@ -4,7 +4,7 @@ const BATTLE_PARAMETER = "?sheetName=battleRecord";
 
 const RECIPE_PARAMETER = "?sheetName=recipeRecord";
 
-const VER_NAME = "ver 1.81"
+const VER_NAME = "ver 1.991"
 
 const getReaderList = () => {
     const jsonUrl = "./static/json/reader.json"
@@ -53,7 +53,7 @@ const setHeaderParts = () => {
 
     const recordButtonTag = `<input type="submit" class="funButton" onclick="battleRecordPage()" value="過去の戦績表">`;
 
-    const dataTag = `<input type="submit" class="funButton" onclick="recipePage()" value="デッキの登録">`;
+    const dataTag = `<input type="submit" class="funButton unavailable" onclick="" value="デッキの登録">`;
 
     const pageTitle = `<div class="rulesInner"><div class="boxTxt"><h3 class="rulesColTit rulesFunction">ページ</h3></div>${battleButtonTag}${recordButtonTag}${dataTag}</div>`;
 

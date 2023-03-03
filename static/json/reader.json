@@ -28,6 +28,10 @@
         "reader_image_url": "./static/img/reader/ST07-001.png"
     },
     {
+        "reader_name": "赤ウタ",
+        "reader_image_url": "./static/img/reader/P-011.png"
+    },
+    {
         "reader_name": "赤ロロノア・ゾロ",
         "reader_image_url": "./static/img/reader/OP01-001.png"
     },
@@ -86,5 +90,37 @@
     {
         "reader_name": "黒スモーカー",
         "reader_image_url": "./static/img/reader/OP02-093.png"
+    },
+    {
+        "reader_name": "赤ポートガス・D・エース",
+        "reader_image_url": "./static/img/reader/OP03-001.png"
+    },
+    {
+        "reader_name": "緑クロ",
+        "reader_image_url": "./static/img/reader/OP03-021.png"
+    },
+    {
+        "reader_name": "緑黄アーロン",
+        "reader_image_url": "./static/img/reader/OP03-022.png"
+    },
+    {
+        "reader_name": "青ナミ",
+        "reader_image_url": "./static/img/reader/OP03-040.png"
+    },
+    {
+        "reader_name": "紫アイスバーグ",
+        "reader_image_url": "./static/img/reader/OP03-058.png"
+    },
+    {
+        "reader_name": "黒ロブ・ルッチ",
+        "reader_image_url": "./static/img/reader/OP03-076.png"
+    },
+    {
+        "reader_name": "黒黄シャーロット・リンリン",
+        "reader_image_url": "./static/img/reader/OP03-077.png"
+    },
+    {
+        "reader_name": "黄シャーロット・カタクリ",
+        "reader_image_url": "./static/img/reader/OP03-099.png"
     }
 ]
